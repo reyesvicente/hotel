@@ -1,0 +1,4 @@
+New York = Photo by Quintin Gellar from Pexels
+About = Photo by Dominika Gregušová from Pexels
+Brooklyn = Photo by Nancy Bourque from Pexels
+San Francisco = Photo by Tae Fuller from Pexels
