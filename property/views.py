@@ -10,14 +10,23 @@ def property_list(request):
 
     address_query = request.GET.get('q')
     property_type = request.GET.getlist('property_type', None)
+    location = request.GET.getlist('location', None)
+    beds_number = request.GET.getlist('beds_number', None)
+    size = request.GET.getlist('size', None)
+    category = request.GET.getlist('category', None)
     if address_query and property_type:
         property_list = property_list.filter(
             Q(name__icontains = address_query) &
-            Q(property_type__icontains = property_type[0])
+            Q(property_type__icontains = property_type[0]) &
+            Q(location__icontains = location[0]) &
+            Q(beds_number__icontains = beds_number[0]) &
+            Q(size__icontains = size[0]) &
+            Q(category__icontains = category[0])
         ).distinct()
 
     context = {
         'property_list': property_list
+        
     }
 
     return render(request, template, context)
