@@ -103,10 +103,10 @@
             <div class="probootstrap-card-text">
               <h2 class="probootstrap-card-heading"><a href="{% url 'property:property_detail' property.id %}">{{property}}</a></h2>
               <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>360 W Wellington Chicago, IL 60657</span>
+                <i class="icon-location2"></i> <span>{{property.location}}</span>
               </div>
               <div class="probootstrap-listing-category for-sale"><span>for {{property.property_type}}</span></div>
-              <div class="probootstrap-listing-price"><strong>$ {{property.price}}</strong> / {% if property.property_type.rent %} /month {% else %} {% endif %}</div>
+              <div class="probootstrap-listing-price"><strong>$ {{property.price}}</strong> {% if property.property_type.rent %} /month {% else %} {% endif %}</div>
             </div>
             <div class="probootstrap-card-extra">
               <ul>
