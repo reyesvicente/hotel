@@ -43,7 +43,7 @@
                   <i class="icon-location2"></i> <span>{{property.location}}</span>
                 </div>
                 <div class="probootstrap-listing-category for-sale"><span>for {{property.property_type}}</span></div>
-                <div class="probootstrap-listing-price"><strong>$ {{property.price}}</strong></div>
+                <div class="probootstrap-listing-price"><strong>$ {{property.price}}{% if not property_type.sale %} Total Price {% else %} /month {% endif %}</strong></div>
               </div>
               <div class="probootstrap-card-extra">
                 <ul>
