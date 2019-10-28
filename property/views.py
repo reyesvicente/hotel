@@ -18,7 +18,6 @@ def property_list(request):
 
     context = {
         'property_list': property_list
-        
     }
 
     return render(request, template, context)
