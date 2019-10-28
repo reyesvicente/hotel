@@ -35,12 +35,12 @@
           <div class="col-md-4 col-sm-6">
             <div class="probootstrap-card probootstrap-listing">
               <div class="probootstrap-card-media">
-                <img src="{{property.image.url}}" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+                <img src="{{property.image.url}}" class="img-responsive" alt="{{property}}">
               </div>
               <div class="probootstrap-card-text">
                 <h2 class="probootstrap-card-heading"><a href="{% url 'property:property_detail' property.id %}">{{property}}</a></h2>
                 <div class="probootstrap-listing-location">
-                  <i class="icon-location2"></i> <span>360 W Wellington Chicago, IL 60657</span>
+                  <i class="icon-location2"></i> <span>{{property.location}}</span>
                 </div>
                 <div class="probootstrap-listing-category for-sale"><span>for {{property.property_type}}</span></div>
                 <div class="probootstrap-listing-price"><strong>$ {{property.price}}</strong> / month</div>

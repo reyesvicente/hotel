@@ -10,9 +10,9 @@ def home(request):
     agent_list = Agent.objects.all()
     template = 'home/home.html'
     context = {
-        'category_list_home': category_list,
-        'property_list_home': property_list,
-        'agent_list_home': agent_list,
+        'category_list': category_list,
+        'property_list': property_list,
+        'agent_list': agent_list,
     }
 
     return render(request, template, context)
