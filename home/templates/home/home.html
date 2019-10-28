@@ -106,7 +106,7 @@
                 <i class="icon-location2"></i> <span>360 W Wellington Chicago, IL 60657</span>
               </div>
               <div class="probootstrap-listing-category for-sale"><span>for {{property.property_type}}</span></div>
-              <div class="probootstrap-listing-price"><strong>$ {{property.price}}</strong> / month</div>
+              <div class="probootstrap-listing-price"><strong>$ {{property.price}}</strong> / {% if property.property_type.rent %} /month {% else %} {% endif %}</div>
             </div>
             <div class="probootstrap-card-extra">
               <ul>
