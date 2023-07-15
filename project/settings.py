@@ -21,10 +21,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG')
+SECRET_KEY = 'asdafoiausdtrfu7SA(&*^fdsakj)'
+DEBUG = True
 
-ALLOWED_HOSTS = ['icvn-hotel.herokuapp.com', '0.0.0.0']
+ALLOWED_HOSTS = ['icvn-hotel.herokuapp.com', '0.0.0.0', '*']
 
 
 # Application definition
@@ -82,9 +82,10 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('HEROKU_POSTGRESQL_JADE_URL')
-    )
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "hotel",
+    }
 }
 
 # Password validation
@@ -174,3 +175,5 @@ SECURE_BROWSER_XSS_FILTER       = True
 X_FRAME_OPTIONS                 = 'DENY'
 
 django_heroku.settings(locals())
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
